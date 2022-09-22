@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root{
+    --primary-dark: #5651e5;
+    --primary-light:#709dff;
+}
+
+.icon{
+    color:var(--primary-dark)
+}
+
+.selectCardImg{
+    transition: .7s ease all;
+}
+.selectCardImg:hover{
+    transform: scale(1.1);
+}
+.destinationImg{
+    transition: .7s ease all;
+    cursor: pointer;
+}
+
+.destinationImg:hover{
+    transform: scale(0.85);    
+    box-shadow: 0px 0px 20px;
+}
+.TextTransition{
+    transition: .7s ease all;
+    cursor: pointer;
+}
+.TextTransition:hover{
+    transform: scale(1.1);
+}
+.TextTransitionNavbarMenu{
+    transition: .7s ease all;
+    cursor: pointer;
+}
+.TextTransitionNavbarMenu:hover{
+    transform: scale(.95);
+}
+
+@layer base{
+    body{
+        @apply font-[Poppins]
+    }
+    li{
+       @apply p-4 
+    }
+    h1{
+        @apply text-3xl md:text-4xl font-bold
+    }
+    h2{
+        @apply text-3xl font-bold
+    }
+    h3{
+        @apply text-xl font-bold
+    }
+    button{
+        @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-md
+    }
+    .icon{
+        @apply text-2xl cursor-pointer TextTransition
+    }
+
+}
